@@ -10,8 +10,6 @@
  * ignored when counting neighbors.
  */
 public class GameOfLife {
-    if (rows <= 0 || cols <= 0) { 
-        throw new IllegalArgumentException("Rows and columns have to be positive."); }
     
     private boolean[][] society;
 
@@ -22,12 +20,12 @@ public class GameOfLife {
         if (rows <= 0 || cols <= 0) {
             throw new IllegalArgumentException("Rows and columns must be positive.");
         }
-   
+        society = new boolean[rows][cols];
     }
 
     /** Returns the number of rows in the society. */
     public int numberOfRows() {
-        return socitey.length;
+        return society.length;
     }
 
     /** Returns the number of columns in the society. */
@@ -135,8 +133,6 @@ public class GameOfLife {
                 }else{ 
                     result += "."; } } result += "\n"; 
                 } 
-                return result;
-
-        return "Complete toString() to display the text version of the board.\n";
+        return result;
     }
 }
